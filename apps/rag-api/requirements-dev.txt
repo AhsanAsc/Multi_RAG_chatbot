@@ -37,3 +37,4 @@ websockets==15.0.1
 types-requests
 openai>=1.0.0
 pytest-asyncio
+tiktoken>=0.5.0
