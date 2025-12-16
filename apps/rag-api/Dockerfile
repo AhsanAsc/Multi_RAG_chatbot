@@ -16,6 +16,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src ./src
 ENV PYTHONPATH=/app/src
 
+# Set DATA_DIR for Docker environment
+ENV DATA_DIR=/app/data
+
 # writable data dir + non-root user
 RUN mkdir -p /app/data && useradd -m appuser && chown -R appuser:appuser /app
 USER appuser
