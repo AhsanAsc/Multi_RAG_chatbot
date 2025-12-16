@@ -1,0 +1,29 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  api-ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/rag-api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Poetry
+        run: pip install poetry==1.8.3
+      - name: Install deps
+        run: |
+          poetry config virtualenvs.create false
+          poetry install --no-interaction --no-ansi
+      - name: Lint & Type-check
+        run: |
+          ruff check src
+          black --check src
+          mypy src || true
+      - name: Tests
+        run: pytest -q
+      - name: Docker build
+        run: docker build . -t rag-api:ci

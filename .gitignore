@@ -1,0 +1,207 @@
+############################################
+# OS / Editor
+############################################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+############################################
+# Python
+############################################
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+.cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+############################################
+# Jupyter / Notebooks
+############################################
+.ipynb_checkpoints/
+*.ipynb
+!*.template.ipynb
+
+############################################
+# Environment / Secrets
+############################################
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+secrets/
+credentials/
+**/credentials.*
+**/service_account*.json
+**/*secret*
+**/*apikey*
+**/*api_key*
+**/*token*
+
+############################################
+# Logs / Runtime artifacts
+############################################
+logs/
+*.log
+*.out
+*.err
+*.pid
+*.pid.lock
+
+############################################
+# App runtime data (RAG)
+############################################
+# Uploaded files / user data
+uploads/
+user_uploads/
+data/uploads/
+data/user_uploads/
+data/
+
+# RAG stores / caches (keep your code, ignore generated)
+data/chunks/
+data/embeddings/
+data/index/
+data/indexes/
+data/vectorstore/
+data/vectorstores/
+data/retrieval_cache/
+data/cache/
+cache/
+tmp/
+temp/
+
+############################################
+# Vector DBs (local dev)
+############################################
+# Chroma
+chroma/
+chromadb/
+**/chroma_db/
+**/chromadb/
+
+# FAISS
+*.faiss
+*.index
+*.fvecs
+*.ivecs
+
+# Qdrant local
+qdrant_storage/
+**/qdrant_storage/
+
+# Milvus / Weaviate local
+milvus/
+weaviate/
+
+############################################
+# LLM / Tokenizer / HF / Ollama caches
+############################################
+.hf_cache/
+huggingface/
+.huggingface/
+transformers_cache/
+**/models/
+**/model_cache/
+**/llm_cache/
+**/tokenizers/
+
+# Ollama (if someone accidentally stores it in repo)
+.ollama/
+ollama/
+
+############################################
+# Streamlit / Gradio
+############################################
+.streamlit/secrets.toml
+.streamlit/.cache/
+gradio_cached_examples/
+gradio_cache/
+
+############################################
+# Node / Frontend (if you have React/Next)
+############################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.next/
+out/
+dist/
+build/
+coverage/
+.eslintcache
+
+############################################
+# Docker
+############################################
+*.tar
+docker-compose.override.yml
+
+############################################
+# Databases
+############################################
+*.db
+*.sqlite
+*.sqlite3
+
+############################################
+# Cloud / IaC state
+############################################
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+*.tfvars
+
+############################################
+# Reports / Exports
+############################################
+reports/
+artifacts/
+mlruns/
+wandb/
+*.pdf
+*.csv
+*.parquet
+
+############################################
+# Tests artifacts
+############################################
+.coverage
+htmlcov/
+coverage.xml
+
+############################################
+# Keep placeholders
+############################################
+!.gitkeep
+test.py
