@@ -1,7 +1,7 @@
 docx2txt==0.8
 fastapi==0.124.4
 httpx==0.28.1
-numpy==1.21.5
+numpy==2.1.0
 openai==2.13.0
 opencv_python_headless==4.10.0.84
 pandas==2.3.3
